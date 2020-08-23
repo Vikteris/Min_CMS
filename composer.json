@@ -1,0 +1,20 @@
+{
+    "name": "vikas/min-cms",
+    "description": "cms project",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ViktorasJonutis",
+            "email": "vikteris@gmail.com"
+        }
+    ],
+    "require": {
+        "doctrine/orm": "^2.7"
+    },
+
+    "autoload": {
+        "files": ["src/Pages.php"]
+    }
+
+}
