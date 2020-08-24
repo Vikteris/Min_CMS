@@ -6,5 +6,3 @@ require "pages/page_generator.php";
 generateAdmin($pages);
 generatePage();
 
-
-

@@ -21,7 +21,7 @@ function pageLinks()
         $page_id = $values->getId();
         $page_content = $values->getContent();
         echo
-            "<a href=\"index.php?pageId=$page_id&pageName=$page_name&pageContent=$page_content\">$page_name</a><br>";
+            "<a id=navbar href=\"index.php?pageId=$page_id&pageName=$page_name&pageContent=$page_content\">$page_name</a><br>";
     }
 }
 
@@ -87,7 +87,7 @@ function generatePage()
 function generateAdmin($pages)
 {
     global $db_headers, $entityManager;
-    if (isset($_POST["login"]) || isset($_GET["editPage"]) || isset($_GET["addPage"]) || isset($_GET["deletePage"]) || isset($_GET["delete"]) || isset($_GET["add"])|| isset($_POST["editPage"])) {
+    if (isset($_POST["login"]) || isset($_GET["editPage"]) || isset($_GET["addPage"]) || isset($_GET["deletePage"]) || isset($_GET["delete"]) || isset($_GET["add"]) || isset($_POST["editPage"])) {
         echo
             '<!DOCTYPE html>
                 <html lang="en">
@@ -100,23 +100,24 @@ function generateAdmin($pages)
                 </head>
                 <body>
                     ' . pageLinks($pages) . '
-                    <a href="?logout">Logout</a>
+                    <a  href="?logout">Logout</a>
 
 
                     <h1>Admin navigation</h1>
-            <table>
+
+            <table id="adminTable">
                 <tr>';
         foreach ($db_headers as $key) {
             echo  "<th>" . $key . "</th>";
         };
-            echo "<th>" . 'Action' . "</th>";
+        echo "<th>" . 'Action' . "</th>";
         '</tr>';
         foreach ($pages as $values) {
 
             $page_id = $values->getId();
             $page_name = $values->getName();
             $page_content = $values->getContent();
-            
+
             echo
                 "<tr>
                     <td>" . $values->getId() . "</td>
@@ -127,17 +128,16 @@ function generateAdmin($pages)
                     <a href=\"index.php?deletePage=$page_id\">Delete<a>
                     </td>
                     </tr>";
-                };
-            echo 
+        };
+        echo
             "<tr>
-                <a href=\"index.php?addPage=$pages\">Add</a>
+                <a id='add' href=\"index.php?addPage=$pages\">Add new </a>
             </tr>";
-            '</table>';
+        '</table>';
         addNewPage($entityManager);
         editPage($entityManager);
-                '</body>
+        '</body>
 
                 </html>';
     }
 }
-

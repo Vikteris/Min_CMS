@@ -51,8 +51,31 @@ h2 {
     text-align: center;
     color: #017572;
 }
-.name {
-
-    color: red;
+#adminTable{
+width: 100%;
+text-align: center;
 }
+tr, th, td{
+    border-bottom: 1px solid powderblue;
+}
+#add{
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#add:hover{
+    color: white;
+}
+#navbar{
+    height: 40px;
+    margin: 2px;
+    color: gray;
+    text-decoration: none;
+    font-size: 20px;
+}
+#navbar:hover{
+    color: white;
+}
+
+
  
