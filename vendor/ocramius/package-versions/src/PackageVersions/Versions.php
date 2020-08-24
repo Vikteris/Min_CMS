@@ -12,7 +12,7 @@ namespace PackageVersions;
  */
 final class Versions
 {
-    public const ROOT_PACKAGE_NAME = 'vikas/min-cms';
+    public const ROOT_PACKAGE_NAME = 'andrius/pilvelis';
     /**
      * Array of all available composer packages.
      * Dont read this array from your calling code, but use the \PackageVersions\Versions::getVersion() method instead.
@@ -44,7 +44,7 @@ final class Versions
   'symfony/polyfill-php80' => 'v1.18.1@d87d5766cbf48d72388a9f6b85f280c8ad51f981',
   'symfony/service-contracts' => 'v2.1.3@58c7475e5457c5492c26cc740cc0ad7464be9442',
   'symfony/string' => 'v5.1.3@f629ba9b611c76224feb21fe2bcbf0b6f992300b',
-  'vikas/min-cms' => 'dev-master@087f2d48e45e5ea34caa3fff81ded60cf2a6d114',
+  'andrius/pilvelis' => 'dev-master@0f93acada2f51ca5ccbfd806f4fc0798156be2c0',
 );
 
     private function __construct()

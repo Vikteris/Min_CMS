@@ -19,7 +19,7 @@ class Pages
     private $pageName;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="text")
      */
     private $content;
 
